@@ -20,3 +20,4 @@ RUN cp target/release/hbbs /usr/local/bin/hbbs
 
 # 🔥 این خط مهم است: به Railway بگو hbbs را اجرا کند
 CMD ["hbbs"]
+ 
