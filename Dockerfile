@@ -11,4 +11,8 @@ COPY config.toml /app/config.toml
 
 RUN cargo build --release --bin hbbs && cargo build --release --bin hbbr
 
-CMD ["./target/release/hbbs"]
+# 👇 اضافه شده: فایل اجرایی را کپی کن
+RUN cp target/release/hbbs /usr/local/bin/hbbs
+
+# 👇 اضافه شده: فرمان اجرای hbbs
+CMD ["hbbs"]
