@@ -1,0 +1,6 @@
+[hbbs]
+rendezvous_port = 8080
+
+[hbbr]
+relay_port_tcp = 8080
+relay_port_udp = 8080
