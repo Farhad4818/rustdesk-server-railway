@@ -1,3 +1,4 @@
+
 FROM rust:latest
 
 RUN apt-get update && apt-get install -y pkg-config libssl-dev git
@@ -12,4 +13,4 @@ EXPOSE 21115/tcp
 EXPOSE 21116/tcp
 EXPOSE 21116/udp
 
-CMD ./target/release/hbbs & ./target/release/hbbr 
+CMD ./target/release/hbbs & ./target/release/hbbr
