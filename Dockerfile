@@ -13,4 +13,6 @@ EXPOSE 21115/tcp
 EXPOSE 21116/tcp
 EXPOSE 21116/udp
 
-CMD ./target/release/hbbs & ./target/release/hbbr 
+COPY config.toml /app/config.toml
+CMD ["hbbr", "--config", "/app/config.toml"]
+CMD ["hbbs", "--config", "/app/config.toml"]
