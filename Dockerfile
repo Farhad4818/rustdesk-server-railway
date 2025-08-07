@@ -6,12 +6,10 @@ WORKDIR /app
 
 RUN git clone --branch 1.1.9 https://github.com/rustdesk/rustdesk-server.git .
 
-WORKDIR /app
-
 RUN cargo build --release --bin hbbs && cargo build --release --bin hbbr
 
 EXPOSE 21115/tcp
 EXPOSE 21116/tcp
 EXPOSE 21116/udp
 
-CMD ./target/release/hbbs & ./target/release/hbbr -c config/hbbr.toml
+CMD ./target/release/hbbs & ./target/release/hbbr
